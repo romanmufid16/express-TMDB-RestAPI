@@ -9,6 +9,7 @@ const port = process.env.PORT;
 
 app.use(express.json());
 
+// Fetching data form TMDB to be save in movies array when server started
 const fetchMovies = async () => {
   const url = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
   const token = process.env.ACCESS_TOKEN;
